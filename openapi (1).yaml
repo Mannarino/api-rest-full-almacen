@@ -1,0 +1,176 @@
+openapi: 3.0.3
+info:
+  title: almacen 
+  description: |-
+  version: 1.0.0
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+tags:
+  - name: productos
+    description: gestion de productos del almacen
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+ 
+paths:
+  /productos/agregar-procutos:
+    get:
+      tags:
+        - productos
+      summary: obtiene todos los productos de la tienda
+      description: obtiene todos los productos de la tienda
+      operationId: getAllProductos
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Productos'
+        '400':
+          description: Invalid status value
+    
+    post:
+      tags:
+        - productos
+      summary: Add a new producto
+      description: Add a new producto
+      operationId: addProducto
+      requestBody:
+        description: Create a new product
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Producto-agregado'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                 $ref: '#/components/schemas/Productos'       
+        '405':
+          description: Invalid input
+         
+  /productos/agregar-procutos/{id}:  
+    get:
+      tags:
+        - productos
+      summary: Finds a producto  by id
+      description: return one person by id
+      operationId: getAPersonporn
+      parameters:
+        - name: id
+          in: path
+          description: to find one person
+          required: true
+          explode: true
+          schema:
+            type: string
+         
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Productos'
+        '400':
+          description: Invalid status value
+    
+    put:
+      tags:
+        - productos
+      summary: Update an existing producto
+      description: Update an existing producto by Id
+      operationId: updateProduct
+      parameters:
+        - name: id
+          in: path
+          description: to find one product
+          required: true
+          explode: true
+          schema:
+            type: string
+      requestBody:
+        description: Update an existent persona in the store
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Productos'
+        required: true
+      responses:
+          default:
+           description: successful operation
+     
+    delete:
+      tags:
+        - productos
+      summary: elimina an existing persona porno
+      description: elimina an existing persona porno by Id
+      operationId: delete
+      parameters:
+        - name: id
+          in: path
+          description: to find one person
+          required: true
+          explode: true
+          schema:
+            type: string
+      responses:
+          default:
+           description: successful operation   
+     
+components:
+  schemas:
+    Productos:
+      required:
+        - nombre
+        - precioCosto
+        - porcentajeGanancia
+        - precioFinal
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        nombre:
+          type: string
+          example: cerveza
+        precioCosto:
+          type: number
+          example: 1888
+        porcentajeGanancia:
+          type: number
+          example: 60
+        precioFinal:
+          type: number
+          example: 99
+    Producto-agregado:
+      required:
+        - nombre
+        - precioCosto
+        - porcentajeGanancia
+        - precioFinal
+      type: object
+      properties:
+        nombre:
+          type: string
+          example: cerveza
+        precioCosto:
+          type: number
+          example: 1888
+        porcentajeGanancia:
+          type: number
+          example: 60
+        precioFinal:
+          type: number
+          example: 99
+  
+  
