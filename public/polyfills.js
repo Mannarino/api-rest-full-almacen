@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\amanda\Desktop\proyectos\almacen\frontend\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Users\amanda\Desktop\proyectos\almacen-nuve\frontend\src\polyfills.ts */"hN/g");
 
 
 /***/ }),

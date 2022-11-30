@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\amanda\Desktop\proyectos\almacen\frontend\src\main.ts */"zUnb");
+module.exports = __webpack_require__(/*! C:\Users\amanda\Desktop\proyectos\almacen-nuve\frontend\src\main.ts */"zUnb");
 
 
 /***/ }),
@@ -409,6 +409,37 @@ BuscadorPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe
 
 /***/ }),
 
+/***/ "Miaw":
+/*!********************************************!*\
+  !*** ./src/app/loguin/loguin.component.ts ***!
+  \********************************************/
+/*! exports provided: LoguinComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoguinComponent", function() { return LoguinComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/auth.service */ "lGQG");
+
+
+class LoguinComponent {
+    constructor(authService) {
+        this.authService = authService;
+        this.admin = {
+            email: '',
+            password: ''
+        };
+    }
+    ngOnInit() {
+    }
+}
+LoguinComponent.ɵfac = function LoguinComponent_Factory(t) { return new (t || LoguinComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"])); };
+LoguinComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LoguinComponent, selectors: [["app-loguin"]], decls: 0, vars: 0, template: function LoguinComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJsb2d1aW4uY29tcG9uZW50LmNzcyJ9 */"] });
+
+
+/***/ }),
+
 /***/ "Rf3L":
 /*!**********************************************!*\
   !*** ./src/app/services/calcular.service.ts ***!
@@ -604,7 +635,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _agregar_producto_agregar_producto_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./agregar-producto/agregar-producto.component */ "YSWh");
 /* harmony import */ var _editar_producto_editar_producto_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./editar-producto/editar-producto.component */ "bIDi");
 /* harmony import */ var _producto_faltante_producto_faltante_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./producto-faltante/producto-faltante.component */ "4rYg");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _loguin_loguin_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./loguin/loguin.component */ "Miaw");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
 
 
 
@@ -618,20 +652,23 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_1__["AppRoutingModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
         _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
         _buscador_pipe__WEBPACK_IMPORTED_MODULE_6__["BuscadorPipe"],
         _agregar_producto_agregar_producto_component__WEBPACK_IMPORTED_MODULE_7__["AgregarProductoComponent"],
         _editar_producto_editar_producto_component__WEBPACK_IMPORTED_MODULE_8__["EditarProductoComponent"],
-        _producto_faltante_producto_faltante_component__WEBPACK_IMPORTED_MODULE_9__["ProductoFaltanteComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _producto_faltante_producto_faltante_component__WEBPACK_IMPORTED_MODULE_9__["ProductoFaltanteComponent"],
+        _loguin_loguin_component__WEBPACK_IMPORTED_MODULE_10__["LoguinComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_1__["AppRoutingModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]] }); })();
 
@@ -766,6 +803,30 @@ EditarProductoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formGroup", ctx.form);
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLink"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormControlName"]], styles: ["[_nghost-%COMP%]{\r\n\tdisplay: block;\r\n\tmargin-top: 200px;\r\n\twidth: 50%\r\n}\r\n.back[_ngcontent-%COMP%]{\r\n\tmargin-bottom: 40px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVkaXRhci1wcm9kdWN0by5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtDQUNDLGNBQWM7Q0FDZCxpQkFBaUI7Q0FDakI7QUFDRDtBQUNBO0NBQ0MsbUJBQW1CO0FBQ3BCIiwiZmlsZSI6ImVkaXRhci1wcm9kdWN0by5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbjpob3N0e1xyXG5cdGRpc3BsYXk6IGJsb2NrO1xyXG5cdG1hcmdpbi10b3A6IDIwMHB4O1xyXG5cdHdpZHRoOiA1MCVcclxufVxyXG4uYmFja3tcclxuXHRtYXJnaW4tYm90dG9tOiA0MHB4O1xyXG59Il19 */"] });
+
+
+/***/ }),
+
+/***/ "lGQG":
+/*!******************************************!*\
+  !*** ./src/app/services/auth.service.ts ***!
+  \******************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+class AuthService {
+    constructor() { }
+    loginAdmin(admin) {
+        // return this.http.post<Login>(`${environment.url_endpoint}/admin/register/login`,admin)
+    }
+}
+AuthService.ɵfac = function AuthService_Factory(t) { return new (t || AuthService)(); };
+AuthService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: AuthService, factory: AuthService.ɵfac, providedIn: 'root' });
 
 
 /***/ }),
