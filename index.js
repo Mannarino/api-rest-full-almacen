@@ -28,5 +28,5 @@ routes(app)
 
 //server escuchando
 app.listen(process.env.PORT || 3000,()=>{
-	console.log('programa almacen andando en el puerto '+ process.env.PORT)
+	console.log('programa almacen andando en el puerto '+ (process.env.PORT || 3000))
 })

@@ -5,21 +5,21 @@ const controller = require('./controller.js')
 
 router.get('/',async(req,res)=>{ 
 	  
-	  	let respuesta = await controller.obtener()
-        res.send(respuesta)    
+	  	let todosLosProductos = await controller.obtener()
+        res.send(todosLosProductos)    
 })
 router.get('/:id',async(req,res)=>{ 
 	  const id = req.params.id
 	  
-        let respuesta = await controller.obtenerPorId(id)
-        res.send(respuesta)  
+        let elProductoEspecifico = await controller.obtenerPorId(id)
+        res.send(elProductoEspecifico)  
 
 })
 router.put('/:id',async(req,res)=>{ 
 	  const id = req.params.id
 	  
-        let respuesta = await controller.actualizarPorId(id,req.body)
-        res.send(respuesta)  
+        let elProductoEspecificoActualizado = await controller.actualizarPorId(id,req.body)
+        res.send(elProductoEspecificoActualizado)  
 
 })
 router.delete('/:id',async(req,res)=>{ 
