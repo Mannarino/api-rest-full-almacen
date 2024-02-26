@@ -9,11 +9,11 @@ router.post('/', async (req,res)=>{
 	    const user = req.body.user
 		const password = req.body.password
 		
-		if(user==config.user && password == config.password){
+		if(user== config.USER && password == config.PASSWORD){
 			res.send({message:'logueado con exito',success:true})
 		}
 	    else{
-	    	res.status(401).send({message:'hubo un fallo o oermiso negado',success:false})
+	    	res.status(401).send({message:'hubo un fallo o permiso negado',success:false})
 	    }
 		
 		
