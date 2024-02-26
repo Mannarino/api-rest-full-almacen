@@ -13,7 +13,7 @@ router.post('/', async (req,res)=>{
 			res.send({message:'logueado con exito',success:true})
 		}
 	    else{
-	    	res.status(401).send()
+	    	res.status(401).send({message:'hubo un fallo o oermiso negado',success:false})
 	    }
 		
 		
